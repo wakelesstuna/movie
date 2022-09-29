@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: movie
+  datasource:
+    url: jdbc:postgresql://localhost:5432/movie
+    username: root
+    password: letmein
+    driverClassName: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        order_inserts: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          time_zone: UTC # This will write time in utc format in the database
+    hibernate:
+      show-sql: true
+      ddl-auto: update
+
+allowed:
+  origin:
+    urls: "localhost:3000,localhost:4200"
+
+# Actuator endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
