@@ -1,4 +1,4 @@
-package io.wakelesstuna.movie.controllers;
+package io.wakelesstuna.movie.entites.response;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
